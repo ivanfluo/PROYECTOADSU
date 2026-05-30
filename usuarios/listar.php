@@ -150,6 +150,42 @@ $resultado = $conexion->query($sql);
 
 <?php include("../includes/navbar.php"); ?>
 
+<?php
+
+if(isset($_GET['success'])){
+
+?>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function(){
+
+    Swal.fire({
+
+        icon: 'success',
+
+        title: 'Usuario registrado',
+
+        text: 'El usuario fue creado correctamente.',
+
+        confirmButtonColor: '#0d6efd',
+
+        confirmButtonText: 'Aceptar'
+
+    });
+
+});
+
+</script>
+
+<?php
+
+}
+
+?>
+
 <div class="container py-5">
 
     <div class="container-box">

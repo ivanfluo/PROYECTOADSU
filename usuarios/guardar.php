@@ -35,11 +35,13 @@ VALUES
 
 try{
 
-    if($conexion->query($sql)){
+if($conexion->query($sql)){
 
-        header("Location: listar.php");
+    header("Location: listar.php?success=1");
 
-    }
+    exit();
+
+}
 
 }catch(mysqli_sql_exception $e){
 
