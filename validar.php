@@ -38,7 +38,21 @@ if($resultado->num_rows > 0){
 
     $_SESSION['rol'] = $fila['rol'];
 
+    if(
+    $fila['rol'] == 'votante'
+    &&
+    $fila['ya_voto'] == 0
+){
+
+    header("Location: votos/votar.php");
+
+}else{
+
     header("Location: dashboard.php");
+
+}
+
+exit();
 
 }else{
 
